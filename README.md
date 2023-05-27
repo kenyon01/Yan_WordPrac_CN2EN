@@ -11,3 +11,9 @@ First,this pprogram will read you words in xlsx file. Second, program will test 
 - display input history
 - skip pervious or later word
 
+
+### package method
+WINDOWS: cxfreeze main.py --target-dir WIN64
+LINUX：pyinstaller --onefile main.py
+
+
