@@ -13,7 +13,7 @@ First,this pprogram will read you words in xlsx file. Second, program will test 
 
 
 ### package method
-WINDOWS: cxfreeze main.py --target-dir WIN64
-LINUX：pyinstaller --onefile main.py
+- WINDOWS: cxfreeze main.py --target-dir WIN64
+- LINUX：pyinstaller --onefile main.py
 
 
