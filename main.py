@@ -1,11 +1,18 @@
-import tkinter as tk
-from gui import SpellingApp
+import sys
+from PyQt5.QtWidgets import QApplication, QFileDialog
+from app import SpellingApp
 
 def main():
-    root = tk.Tk()
-    app = SpellingApp(root)
-    app.load_words()  # 从文件加载单词
-    root.mainloop()
+    app = QApplication(sys.argv)
 
-if __name__ == "__main__":
+    spelling_app = SpellingApp()
+    spelling_app.show()
+
+    filename, _ = QFileDialog.getOpenFileName(spelling_app, 'Open Word File', '.', 'Excel files (*.xlsx *.xls)')
+    if filename:
+        spelling_app.load_words(filename)
+
+    sys.exit(app.exec_())
+
+if __name__ == '__main__':
     main()
